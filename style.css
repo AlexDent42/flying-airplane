@@ -20,7 +20,7 @@ section {
 
 }
 
-section .runaway {
+section .runway {
     position: relative;
     width: 400px;
     height: 100vh;
@@ -30,7 +30,7 @@ section .runaway {
 
 }
 
-section .runaway::before {
+section .runway::before {
     content: '';
     position: absolute;
     top: 0;
