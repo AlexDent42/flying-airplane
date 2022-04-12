@@ -6,5 +6,49 @@
 
 :root {
     --white-color:#fff;
+    --background-color:#034071;
+    --background-light:#1378bc;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-color);
+
+}
+
+section .runaway {
+    position: relative;
+    width: 400px;
+    height: 100vh;
+    background: var(--background-light);
+    border-left:20px solid rgba(0,0,0,0.25);
+    border-right:20px solid rgba(0,0,0,0.25);
+
+}
+
+section .runaway::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 100%;
+    background: repeating-linear-gradient(transparent 0%, transparent 50%, var(--white-color) 50%, var(--white-color) 100%);
+    background-size: 20px 320px;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+     0% {
+         background-position-y: 0px;
+     }
+     100% {
+         background-position-y: 320px;
+     }
 }
 
